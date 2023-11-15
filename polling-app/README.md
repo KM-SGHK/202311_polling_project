@@ -34,7 +34,7 @@ This project is deployed via `Vercel` for exploration. Link: [Polling Project](h
 | Show Buttons | Check Button Functioning | 
 
 
-## Enhancement
+## Enhancement Options
 
 | Item | Details 
 |----------|----------|
@@ -44,7 +44,7 @@ This project is deployed via `Vercel` for exploration. Link: [Polling Project](h
 | Button Design | Hovering and disabling logic can be improved| 
 | Notification | Loading & error cases can be handled better through design and messages| 
 
-### Running Local Repo
+## Running Local Repo
 
 ```
 npm install
