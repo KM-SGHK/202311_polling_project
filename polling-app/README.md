@@ -42,6 +42,7 @@ This project is deployed via `Vercel` for exploration. Link: [Polling Project](h
 | Voting Management | Control malicious voting through, for example, IP checking | 
 | Responsiveness | Responsiveness can be improved through further optimization for iPad devices and covering polling overview part | 
 | Button Design | Hovering and disabling logic can be improved| 
+| Notification | Loading & error cases can be handled better through design and messages| 
 
 ### Running Local Repo
 
