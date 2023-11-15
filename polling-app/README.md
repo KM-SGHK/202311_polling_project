@@ -1,70 +1,53 @@
-# Getting Started with Create React App
+## Live Demo
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project is deployed via `Vercel` for exploration. Link: [Polling Project](https://202311-polling-project-3hp8.vercel.app/).
 
-## Available Scripts
+## Snapshots
 
-In the project directory, you can run:
+### `Desktop View`
+[![Image1](https://res.cloudinary.com/dy7mysmhp/image/upload/v1700019941/Screenshot_2023-11-15_at_11.41.20_AM_nbx1sy.png "Image 1")](https://example.com/link-for-image-1)
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### `Mobile View`
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+[![Image2](https://res.cloudinary.com/dy7mysmhp/image/upload/v1700019941/Screenshot_2023-11-15_at_11.41.36_AM_jp1ocy.png "Image 2")](https://example.com/link-for-image-1)
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Design
 
-### `npm run build`
+[![Image3](https://res.cloudinary.com/dy7mysmhp/image/upload/v1700021304/Blank_diagram_2_u8uait.png "Image 3")](https://example.com/link-for-image-1)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Principles
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- Maintainability through Refactoring
+- Minimalism in Design
+- Optimizing User Experience Despite Time Constraints
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Test Cases
 
-### `npm run eject`
+### `With @testing-library`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+| Parts | Test Case 
+|----------|----------|
+| Polling On Display| Check Displayed Title |
+| Description | Check Displayed Information | 
+| Show Buttons | Check Button Functioning | 
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Enhancement
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+| Item | Details 
+|----------|----------|
+| State Management| Use Redux store so as to rely less on props for handling state transfer among components |
+| Voting Management | Control malicious voting through, for example, IP checking | 
+| Responsiveness | Responsiveness can be improved through further optimization for iPad devices and covering polling overview part | 
+| Button Design | Hovering and disabling logic can be improved| 
 
-## Learn More
+### Running Local Repo
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```
+npm install
+npm start
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+ 
