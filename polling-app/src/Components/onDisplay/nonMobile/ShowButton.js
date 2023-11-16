@@ -35,7 +35,10 @@ export default function ShowButton({
                     : sixButtonColors[index],
                 color: "white",
                 fontWeight: "bold",
-                minWidth: 150
+                minWidth: 150,
+                ':hover': {
+                  backgroundColor: '#34b8b5', 
+                }
               }}
               onClick={() => handleVote(option.id)}
             >
