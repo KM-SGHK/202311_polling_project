@@ -13,7 +13,7 @@ export default function ShowButton({
   const theme = useTheme();
   const isVeryLargeScreen = useMediaQuery(theme.breakpoints.up("xl"));
   const twoButtonColors = ["#FFA500", "#00008B"]; // for two buttons
-  const sixButtonColors = ['#003366', '#B22222', '#013220', '#32127A', '#E65100', '#3C1414']; // for five buttons
+  const sixButtonColors = ['#003366', '#B22222', '#013220', '#32127A', '#E65100', '#3C1414']; // for six buttons
   const handleVote = (optionId) => {
     const updatedPoll = getUpdatedPoll(optionId, onDisplayPollData);
     setOnDisplayPollData(updatedPoll);

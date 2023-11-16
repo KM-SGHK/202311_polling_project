@@ -19,7 +19,7 @@ export default function ShowButton({
     "#32127A",
     "#E65100",
     "#3C1414",
-  ]; // for five buttons
+  ]; // for six buttons
   const handleVote = (optionId) => {
     const updatedPoll = getUpdatedPoll(optionId, onDisplayPollData);
     setOnDisplayPollData(updatedPoll);
@@ -46,6 +46,9 @@ export default function ShowButton({
                 color: "white",
                 fontWeight: "bold",
                 minWidth: 90,
+                ':hover': {
+                  backgroundColor: '#34b8b5', 
+                }
               }}
               onClick={() => handleVote(option.id)}
             >
