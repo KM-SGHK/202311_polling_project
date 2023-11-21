@@ -39,7 +39,7 @@ This project is deployed via `Vercel` for exploration. Link: [Polling Project](h
 | Item | Details 
 |----------|----------|
 | State Management| Use Redux store so as to rely less on props for handling state transfer among components |
-| Voting Management | Control malicious voting through, for example, IP checking | 
+| Voting Management | Control malicious voting through, for example, IP checking or local storage | 
 | Responsiveness | Responsiveness can be improved through further optimization for iPad devices and covering polling overview part | 
 | Button Design | Hovering and disabling logic can be improved| 
 | Notification | Loading & error cases can be handled better through design and messages| 
@@ -47,6 +47,7 @@ This project is deployed via `Vercel` for exploration. Link: [Polling Project](h
 ## Running Local Repo
 
 ```
+cd polling-app
 npm install
 npm start
 ```
