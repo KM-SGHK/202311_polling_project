@@ -15,7 +15,7 @@ This project is deployed via `Vercel` for exploration. Link: [Polling Project](h
 
 ## Design
 
-[![Image3](https://res.cloudinary.com/dy7mysmhp/image/upload/v1700021304/Blank_diagram_2_u8uait.png "Image 3")](https://example.com/link-for-image-1)
+[![Image3](https://res.cloudinary.com/dy7mysmhp/image/upload/v1700568038/Screenshot_2023-11-21_at_7.57.53_PM_riwlt3.png "Image 3")](https://res.cloudinary.com/dy7mysmhp/image/upload/v1700568038/Screenshot_2023-11-21_at_7.57.53_PM_riwlt3.png)
 
 ## Principles
 
