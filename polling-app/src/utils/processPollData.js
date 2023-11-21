@@ -40,5 +40,66 @@ export function updateAllPollData(updatedPoll, allPollData) {
 }
 
 export function filterAllPollData(pollId, allPollData) {
-    return allPollData.filter(poll => poll.id !== pollId)
+  return allPollData.filter((poll) => poll.id !== pollId);
+}
+
+export function initializeVoteCheckingConfig(votingRecord, questionId) {
+  if (!votingRecord[questionId]) {
+    votingRecord[questionId] = isMultipleSelectQuestion(questionId) ? {} : null;
+  }
+
+  return votingRecord;
+}
+
+export function isMultipleSelectQuestion(questionId) {
+  return [4].includes(questionId); // enabled for scaling up if there are more upcoming multiple-select questions
+}
+
+export function processVoteCasting(votingRecord, questionId, optionId) {
+  if (!isMultipleSelectQuestion(questionId)) {
+    checkSingleSelectQuestionResponse(votingRecord, questionId);
+  }
+
+  if (isMultipleSelectQuestion(questionId)) {
+    checkMultipleSelectQuestionResponse(votingRecord, questionId, optionId);
+  }
+}
+
+function checkSingleSelectQuestionResponse(votingRecord, questionId) {
+  if (votingRecord[questionId]) {
+    alert("You have already voted on this question.");
+    return;
+  }
+  votingRecord[questionId] = 1;
+  updateVotingRecord(votingRecord);
+}
+
+function checkMultipleSelectQuestionResponse(
+  votingRecord,
+  questionId,
+  optionId
+) {
+  if (_.has(votingRecord[questionId], optionId)) {
+    alert("You have already voted on this option.");
+    return;
+  }
+
+  votingRecord[questionId][optionId] = 1;
+  updateVotingRecord(votingRecord);
+}
+
+function updateVotingRecord(votingRecord) {
+  localStorage.setItem("votingRecord", JSON.stringify(votingRecord));
+}
+
+export function isVoted(votingRecord, questionId, optionId) {
+  let flag = false;
+  if (
+    isMultipleSelectQuestion(questionId) &&
+    _.has(votingRecord[questionId], optionId)
+  )
+    flag = true;
+  if (!isMultipleSelectQuestion(questionId) && votingRecord[questionId])
+    flag = true;
+  return flag;
 }

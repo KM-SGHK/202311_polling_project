@@ -21,6 +21,7 @@ function App() {
       setOnDisplayPollData(fetchedAllPollData[0]);
       setPollOverviewList(_.tail(fetchedAllPollData));
     }
+    localStorage.clear();
     fetchData();
   }, []);
   return (

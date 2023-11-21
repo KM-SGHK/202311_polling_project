@@ -3,6 +3,9 @@ import { Stack, Button, Grid } from "@mui/material";
 import {
   getUpdatedPoll,
   updateAllPollData,
+  processVoteCasting,
+  initializeVoteCheckingConfig,
+  isVoted,
 } from "../../../utils/processPollData";
 
 export default function ShowButton({
@@ -21,9 +24,22 @@ export default function ShowButton({
     "#3C1414",
   ]; // for six buttons
   const handleVote = (optionId) => {
-    const updatedPoll = getUpdatedPoll(optionId, onDisplayPollData);
-    setOnDisplayPollData(updatedPoll);
-    setAllPollData(updateAllPollData(updatedPoll, allPollData));
+    // initialize local storage config for vote-casting constraints
+    let votingRecord = JSON.parse(localStorage.getItem("votingRecord")) || {};
+    votingRecord = initializeVoteCheckingConfig(
+      votingRecord,
+      onDisplayPollData.id
+    );
+
+    // conditional state update
+    if (!isVoted(votingRecord, onDisplayPollData.id, optionId)) {
+      const updatedPoll = getUpdatedPoll(optionId, onDisplayPollData);
+      setOnDisplayPollData(updatedPoll);
+      setAllPollData(updateAllPollData(updatedPoll, allPollData));
+    }
+
+    // vote count update
+    processVoteCasting(votingRecord, onDisplayPollData.id, optionId);
   };
   const renderButtons = (buttonOptions) => {
     return (
@@ -45,10 +61,10 @@ export default function ShowButton({
                     : sixButtonColors[index],
                 color: "white",
                 fontWeight: "bold",
-                minWidth: 90,
-                ':hover': {
-                  backgroundColor: '#34b8b5', 
-                }
+                minWidth: 120,
+                ":hover": {
+                  backgroundColor: "#34b8b5",
+                },
               }}
               onClick={() => handleVote(option.id)}
             >
